@@ -10,9 +10,17 @@ Se o tamanho da string for menor que 3, não altere nada.
 Retorne o resultado da string.
 """
 
+
 def verbing(s):
     # +++ SUA SOLUÇÃO +++
-    return
+    verb_suffix = 'ing'
+    adverb_suffix = 'ly'
+    if len(s) > 2:
+        if s[-3:] != verb_suffix:
+            return s + verb_suffix
+        else:
+            return s + adverb_suffix
+    return s
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
